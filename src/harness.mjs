@@ -8,9 +8,9 @@ export const runSafetyCheck = (input) => {
     throw new Error("FROZEN_CORE_VIOLATION: RIVERBRAID_SECRET missing");
   }
 
-  // The Braid: Evaluating against the Judical and Memory gates
-  const isCoherent = input.entropy < 0.5; // Memory Gate
-  const isAuthorized = input.signal === 'STATIONARY'; // Judicial Logic
+  // Orchestrating the Braid: 0.5 Entropy threshold (Memory) + Stationary Signal (Judicial)
+  const isCoherent = input.entropy < 0.5;
+  const isAuthorized = input.signal === 'STATIONARY';
 
   if (!isCoherent || !isAuthorized) {
     return { status: "DENY", reason: "COHERENCE_BREACH" };
@@ -22,7 +22,3 @@ export const runSafetyCheck = (input) => {
     merkle_root: "de2062"
   };
 };
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-  console.log(JSON.stringify(runSafetyCheck({ entropy: 0.1, signal: 'STATIONARY' }), null, 2));
-}
