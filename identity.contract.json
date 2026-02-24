@@ -1,8 +1,10 @@
 {
-  "name": "Riverbraid-Harness-Gold",
-  "role": "Orchestration Layer – Stationary State",
-  "signal": "COHERENCE_ORCHESTRATOR",
+  "name": "Riverbraid-Crypto-Gold",
+  "role": "Security Layer – Mechanical Honesty",
+  "signal": "CRYPTOGRAPHIC_INTEGRITY",
   "version": "1.1",
-  "dependencies": ["Core", "Crypto", "Judicial", "Memory"],
-  "fail_strategy": "FAIL_CLOSED"
+  "fingerprint": "D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4",
+  "merkle_root": "de2062",
+  "algorithm": "SHA-256",
+  "enforcement": "Fail-closed on signature mismatch"
 }
