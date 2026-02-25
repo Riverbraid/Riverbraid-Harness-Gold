@@ -1,4 +1,4 @@
-// Riverbraid-Harness-Gold – Coherence Orchestrator
+// Riverbraid-Harness-Gold-Gold – Coherence Orchestrator
 // 7-bit ASCII only.
 
 export const runSafetyCheck = (input) => {
