@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "node src/harness.mjs",
-    "verify": "node src/memory.mjs"
+    "verify": "node src/memory.mjs",
+    "test": "node verify.mjs"
   }
 }
