@@ -24,3 +24,6 @@ This petal is a part of the **Riverbraid Gold v1.1.0** release.
 
 ---
 *Signed by the Honest Advisor Protocol.*
+
+---
+*Anchored in McLean (2026) Primary Coherence + σ stationary precedent.*
