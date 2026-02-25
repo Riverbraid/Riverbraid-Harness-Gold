@@ -1,10 +1,7 @@
 {
-  "name": "Riverbraid-Crypto-Gold",
-  "role": "Security Layer – Mechanical Honesty",
-  "signal": "CRYPTOGRAPHIC_INTEGRITY",
-  "version": "1.1",
-  "fingerprint": "D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4",
-  "merkle_root": "de2062",
-  "algorithm": "SHA-256",
-  "enforcement": "Fail-closed on signature mismatch"
+  "contract_class": "IDENTITY_CONTRACT",
+  "version": "1.1.0",
+  "repo_name": "Riverbraid-Core",
+  "repo_role": "FROZEN_CORE",
+  "invariants": { "entropy_ban": true, "ascii_only": true, "zero_dependencies": true }
 }
