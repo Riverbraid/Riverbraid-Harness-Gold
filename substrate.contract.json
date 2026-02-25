@@ -1,0 +1,14 @@
+{
+  "contract_class": "SUBSTRATE_CONTRACT",
+  "version": "1.0.0",
+  "controlled_repos": [
+    "Riverbraid-Core",
+    "Riverbraid-Golds",
+    "Riverbraid-Crypto-Gold",
+    "Riverbraid-Judicial-Gold",
+    "Riverbraid-Memory-Gold",
+    "Riverbraid-Integration-Gold",
+    "Riverbraid-Harness-Gold"
+  ],
+  "workspace_relative": true
+}
