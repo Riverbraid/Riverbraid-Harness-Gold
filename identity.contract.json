@@ -1,11 +1,7 @@
 {
-  "repo_name": "Riverbraid-Harness-Gold",
+  "name": "riverbraid-harness-gold",
   "version": "1.1.0",
-  "role": "ORCHESTRATOR",
-  "constraints": {
-    "logic_purity": "ASCII_ONLY",
-    "determinism": "NO_SIDE_EFFECTS",
-    "fail_state": "FAIL_CLOSED"
-  },
-  "audit_trail": "STATIONARY_MANIFEST.json"
+  "governance": "McLean (2026) Primary Coherence",
+  "governed_files": ["README.md", "package.json", "identity.contract.json", "LICENSE", "verify.mjs"],
+  "invariants": { "entropy_ban": true, "stationary_state": true }
 }
