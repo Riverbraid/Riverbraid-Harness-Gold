@@ -1,28 +1,21 @@
 # ⚓ Riverbraid-Harness-Gold
 
 ## 📜 Overview
-The **Riverbraid-Harness-Gold** is the central verification orchestrator for the Riverbraid Gold Cluster. It is responsible for enforcing the **Stationary State Invariant** through byte-floor audits, identity contract validation, and Merkle Root verification.
-
-It operates on a **Fail-Closed** discipline: if any petal in the cluster deviates from its anchored frequency (commit hash), the harness halts all integration processes to prevent entropy leakage.
+The **Riverbraid-Harness-Gold** is the central verification orchestrator for the Riverbraid system. It enforces the **Stationary State Invariant** through byte-floor audits and identity contract validation.
 
 ## 🗝️ Core Functions
-* **Cluster-Level Sealing:** Generates and validates the `STATIONARY_MANIFEST.json`.
-* **Identity Verification:** Audits `identity.contract.json` across all repositories.
-* **Mechanical Honesty:** Ensures all code paths are deterministic and comply with the ASCII-floor mandate.
-* **Nomenclature Enforcement:** Maintains the integrity of the `-Gold` naming convention.
+* **Verification Gate:** Runs `run-vectors.cjs` to ensure the logic layer matches the math.
+* **Fail-Closed Architecture:** Any deviation from the Merkle Root `de2062` results in an immediate system halt.
+* **Nomenclature Authority:** Enforces the use of the `-Gold` suffix across the 7-petal cluster.
 
-## 🧬 Mathematical Anchor
-The harness is anchored in the stationary state logic defined by:
-> **McLean (1994):** A system is secure if and only if it is in a secure state and all state transitions preserve security.
-
-In the Riverbraid context, this is expressed as the **Stationary State Invariant** where the system entropy $S$ remains constant:
-$$\frac{dS}{dt} = 0$$
+## 🧬 Stationary State Invariant
+The system is anchored in the principle of $dS/dt = 0$ (Zero Entropy Growth).
+> "A system is secure if and only if it is in a secure state and all state transitions preserve security." — McLean (1994)
 
 ## 🛡️ Governance
-This repository is a part of the **Riverbraid Gold v1.1.0** release. 
-* **Merkle Root:** `de2062`
+This petal is a part of the **Riverbraid Gold v1.1.0** release.
+* **Fingerprint:** `D9475D6B717D0E6C8EC84F6D8F86D9F4F2B083A4`
 * **Status:** STATIONARY_STATE_ACTIVE
-* **License:** MIT
 
 ---
-*Verified by the Honest Advisor Protocol.*
+*Signed by the Honest Advisor Protocol.*

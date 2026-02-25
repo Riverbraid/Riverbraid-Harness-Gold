@@ -1,10 +1,11 @@
 {
-  "contract_class": "IDENTITY_CONTRACT",
-  "version": "1.1.0",
   "repo_name": "Riverbraid-Harness-Gold",
-  "repo_role": "ORCHESTRATOR",
-  "invariants": {
-    "entropy_ban": true,
-    "ascii_only": true
-  }
+  "version": "1.1.0",
+  "role": "ORCHESTRATOR",
+  "constraints": {
+    "logic_purity": "ASCII_ONLY",
+    "determinism": "NO_SIDE_EFFECTS",
+    "fail_state": "FAIL_CLOSED"
+  },
+  "audit_trail": "STATIONARY_MANIFEST.json"
 }
