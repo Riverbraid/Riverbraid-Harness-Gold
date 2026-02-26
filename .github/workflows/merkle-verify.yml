@@ -1,33 +1,20 @@
-name: "Merkle Root Verification"
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+name: Merkle Verification
+on: [push]
 jobs:
-  verify-coherence:
+  verify:
     runs-on: ubuntu-latest
     steps:
-      - name: "Checkout Source"
-        uses: actions/checkout@v4
-
-      - name: "Calculate Local Hash"
+      - uses: actions/checkout@v4
+      - name: Fetch Truth
+        run: curl -s https://raw.githubusercontent.com/Riverbraid/Riverbraid-Golds/main/TRUTH.md -o TRUTH.md
+      - name: Verify
         run: |
-          LOCAL_HASH=$(find . -type f -not -path '*/.*' -not -path './.github/*' -not -name 'TRUTH.md' | sort | xargs sha256sum | sha256sum | awk '{print $1}')
-          echo "CURRENT_HASH=$LOCAL_HASH" >> $GITHUB_ENV
-          echo "Local Hash: $LOCAL_HASH"
-
-      - name: "Validate Against TRUTH.md"
-        run: |
-          EXPECTED_HASH=$(grep "Harness-Gold" TRUTH.md | grep -oE "[0-9a-f]{64}")
+          CURRENT_HASH=$(find . -type f -not -path '*/.*' -not -path './node_modules/*' -exec sha256sum {} + | sort | sha256sum | awk '{print $1}')
+          EXPECTED_HASH=$(grep "Harness-Gold" TRUTH.md | grep -oE "[0-9a-f]{64}" | head -n 1)
           echo "Comparing Current: $CURRENT_HASH"
           echo "Against Manifest: $EXPECTED_HASH"
-          
           if [ "$CURRENT_HASH" != "$EXPECTED_HASH" ]; then
-            echo "::error::FREQUENCY DISTORTION DETECTED. Local state does not match TRUTH.md invariant."
+            echo "FREQUENCY DISTORTION DETECTED"
             exit 1
-          else
-            echo "::notice::COHERENCE ACHIEVED. Stationary state confirmed."
           fi
+          echo "COHERENCE ACHIEVED"
