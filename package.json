@@ -5,5 +5,9 @@
   "scripts": {
     "preflight": "node -e \"console.log('Preflight: Substrate Mapping Active')\"",
     "test": "node verify.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
   }
 }
