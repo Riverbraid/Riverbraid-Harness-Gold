@@ -1,20 +1,17 @@
 {
-  "contract_class": "riverbraid-gold-v1.1",
+  "contract_class": "RIVERBRAID_HARNESS_GOLD",
   "version": "1.1.0",
-  "repo_name": "riverbraid-harness-gold",
-  "repo_role": "sovereign-reference-petal",
+  "repo_name": "Riverbraid-Harness-Gold",
+  "repo_role": "Execution harness",
+  "invariants": ["NO_ENTROPY_SOURCES", "STATIONARY_OUTPUT"],
   "governed_files": [
-    "README.md",
-    "package.json",
-    "identity.contract.json",
-    "LICENSE",
-    "verify.mjs",
-    "index.js"
-  ],
-  "invariants": {
-    "entropy_ban": true,
-    "deterministic_verification": true,
-    "stationary_state": true
-  },
-  "aperture_reference": "Riverbraid/riverbraid-cognition"
+    "README.md", 
+    "package.json", 
+    "identity.contract.json", 
+    "LICENSE", 
+    "verify.mjs", 
+    "index.js", 
+    "src/index.js", 
+    "src/ascii.js"
+  ]
 }
