@@ -1,9 +1,4 @@
-/**
- * Riverbraid-Harness-Gold - Entry Point
- * Part of the Riverbraid Gold Cluster v1.2.0
- */
-module.exports = {
-  name: "Riverbraid-Harness-Gold",
-  version: "1.2.0",
-  status: "STATIONARY"
+export const runInHarness = (fn, context) => {
+    if (context.merkle_root !== "08e829") throw new Error("HARNESS_UNSAFE_ROOT");
+    return fn();
 };
