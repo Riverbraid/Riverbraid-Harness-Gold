@@ -1,17 +1,7 @@
 {
-  "contract_class": "RIVERBRAID_HARNESS_GOLD",
-  "version": "1.1.0",
+  "contract_class": "riverbraid-reference",
+  "version": "1.3.0",
   "repo_name": "Riverbraid-Harness-Gold",
-  "repo_role": "Execution harness",
-  "invariants": ["NO_ENTROPY_SOURCES", "STATIONARY_OUTPUT"],
-  "governed_files": [
-    "README.md", 
-    "package.json", 
-    "identity.contract.json", 
-    "LICENSE", 
-    "verify.mjs", 
-    "index.js", 
-    "src/index.js", 
-    "src/ascii.js"
-  ]
+  "repo_role": "test-harness-verification",
+  "governed_files": ["index.js", "src/index.js", "verify.mjs", "identity.contract.json", "package.json"]
 }

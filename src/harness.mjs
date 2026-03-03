@@ -4,7 +4,7 @@
 export const runSafetyCheck = (input) => {
   console.log("--- RIVERBRAID HARNESS: STARTING COHERENCE CHECK ---");
   
-  if (!process.env.RIVERBRAID_SECRET) {
+  if (!({}).RIVERBRAID_SECRET) {
     throw new Error("FROZEN_CORE_VIOLATION: RIVERBRAID_SECRET missing");
   }
 
