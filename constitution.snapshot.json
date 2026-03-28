@@ -1,0 +1,173 @@
+{
+  "sha256": "f3386c2faf239e7c4a724e9207b73279aeb97f723b7854e81d944a7d8d5031d3",
+  "files": [
+    {
+      "file": ".anchor",
+      "hash": "a08339bb9a7257f96ded933bbcd13eb614b68e67580f4ddb320f82059723121b"
+    },
+    {
+      "file": ".github/workflows/integrity.yml",
+      "hash": "cb7277ac89cbfee9e6c39407b2da8c6c4f6fb176e403916ec7388d4bd8e597ad"
+    },
+    {
+      "file": ".github/workflows/merkle-verify.yml",
+      "hash": "e67ccd18b8f7672be022dfccdddf115c694dec327e4a1d83d58436013c448af4"
+    },
+    {
+      "file": ".gitignore",
+      "hash": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
+    },
+    {
+      "file": ".stationary_state",
+      "hash": "0383135e2f55bbd428d7f7e6f0de0c7b76f54e92baf59bc1baa8eefcca8866f3"
+    },
+    {
+      "file": "ARCHITECTURE.md",
+      "hash": "4394e3b96050bf23b4643e42d19e1db3283b94670661cdba34d8b33ddcbc487f"
+    },
+    {
+      "file": "BUILD-MANIFEST-v1.1.md",
+      "hash": "946d29114d3a1b96e33dc0a6eaaa20d1f959ebbda8b1e73a092afab8131a9610"
+    },
+    {
+      "file": "CLUSTER_MANIFEST.state",
+      "hash": "9d9b691f6cbe12374ff735593a3942a8b4b8c7c76264f1031a6a87de1eddaced"
+    },
+    {
+      "file": "CODE_OF_CONDUCT.md",
+      "hash": "31511dd391bb26e3846c8fe022a3de3f6028000902179a70354a3a2cabe03cc5"
+    },
+    {
+      "file": "CONTRIBUTING.md",
+      "hash": "14925a89637c595fb57a480c20e792e9b2b8e59e59b3b73cee285554e3d9ba74"
+    },
+    {
+      "file": "LICENSE",
+      "hash": "4e3d6c1ae6af4c3edca13ac3a4425c2187a543b35f3dd4eed0d634e9060b92d8"
+    },
+    {
+      "file": "MANIFEST.SEAL.sha256",
+      "hash": "a9ea7bb4e4c1d08d8b9ced7d8802e360ebeeeac34ae0d1b27a79db8f9f5a08f3"
+    },
+    {
+      "file": "README.md",
+      "hash": "c7dba1c579dc3b7d1c8c28099a6b99c0b6a25fdf103382fc946e0187cf94bc17"
+    },
+    {
+      "file": "SECURITY.md",
+      "hash": "f659baddc79752219b3128b2cef6fbb25616cea779c72e91ab15a09ceae00638"
+    },
+    {
+      "file": "SPEC.md",
+      "hash": "8b2becbb6603d15d0ebfb41259776cd0b453a70ad69b53e2c22136885dafc23b"
+    },
+    {
+      "file": "TRUTH.SEAL.sha256",
+      "hash": "8ca30f886ca1752c528de4ba678a6833631f6285bd43c84d2fc9d555258e9e4b"
+    },
+    {
+      "file": "TRUTH.md",
+      "hash": "04aee8fb4f9a78a1513de5ad67f89ebe1efdc23212315c447f3cdebf7004013f"
+    },
+    {
+      "file": "__init__.py",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "__pycache__/harness.cpython-312.pyc",
+      "hash": "e47cac549329a927bd33e14bdec67d549d2388e0d4bfe33a0074a2f529216a65"
+    },
+    {
+      "file": "bin/gate.mjs",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "bin/heartbeat.mjs",
+      "hash": "c0bc8656b364ee5d0535aa09c6fc959c8ea8b0dadfbd7571ad1b2ddab772fe31"
+    },
+    {
+      "file": "bin/run-vectors.cjs",
+      "hash": "8e4bb628e831e04c0e2816dc12fd529b525a8de5923ce2e1ff9f1b2f7d9c501a"
+    },
+    {
+      "file": "cognitive-architecture.json",
+      "hash": "72bad017e5598f7b0acc9819c7753e549e882a5238861fbc602d785d93f13698"
+    },
+    {
+      "file": "gate.mjs",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "harness.py",
+      "hash": "b21fafdff15782b7ac095d413c706d27bde0508d0e8e799a2ef41d773fa96732"
+    },
+    {
+      "file": "heartbeat.mjs",
+      "hash": "c0bc8656b364ee5d0535aa09c6fc959c8ea8b0dadfbd7571ad1b2ddab772fe31"
+    },
+    {
+      "file": "identity.contract.json",
+      "hash": "38f9da80df37236942705f53a21420070bb229a511ffeba14facb7e169eacadb"
+    },
+    {
+      "file": "index.js",
+      "hash": "38156402203304428b4bce7972a6dc1f1dffa2a0046e5f5c92fda8c13a6a6b1c"
+    },
+    {
+      "file": "package.json",
+      "hash": "fc966d8747752cab085fbdc46115f23cfa43e4f87ea24ff87e8fcf0019014b13"
+    },
+    {
+      "file": "run-vectors.cjs",
+      "hash": "0918f7b1142d021aefafa973a1cd7dd4f881df27636b00d2d0b53379ac245c07"
+    },
+    {
+      "file": "scripts/clean.cjs",
+      "hash": "d259c513e23ac5662fd05025fd0c54685092e2563b06092f762d34ad0e7dc1f9"
+    },
+    {
+      "file": "scripts/entropy-check.mjs",
+      "hash": "a4cab517c1d003bb6bbdc943c70881c534046bb3af40f59fbc3acca87d1ec932"
+    },
+    {
+      "file": "src/ascii.js",
+      "hash": "987ed1d5574b3bd681dbca4f60572043e9e181295e591c8c720258a33cb05cee"
+    },
+    {
+      "file": "src/harness.mjs",
+      "hash": "e54d7f9344443b444925e1fb058f8a830dad3b0e2b6b0e054dae1a7502e0bea0"
+    },
+    {
+      "file": "src/index.js",
+      "hash": "39f03ed5f0e7bf4121ecf83ca73d949892d1d0990638c833e9386ff9443e25a2"
+    },
+    {
+      "file": "src/invariants.js",
+      "hash": "a23eaaa185830d338fe5a794f04141fdce1876f3494876bbd75e413b1add17c1"
+    },
+    {
+      "file": "src/judge.mjs",
+      "hash": "68dfd89c40acbea4750c98841fbac73fc1aeee6bf6772f2bbad7670449fafe6b"
+    },
+    {
+      "file": "src/memory.mjsnal",
+      "hash": "f0751cfec876668535a8cdd1c615c706ae94e571766386e2188d09a7956d36d8"
+    },
+    {
+      "file": "substrate.contract.json",
+      "hash": "ff1c3efab9f43e25d4268e8ecf5fa8fc793df41aefffddce7f35782655b27873"
+    },
+    {
+      "file": "tests/.keep",
+      "hash": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "file": "verify.mjs",
+      "hash": "575fcb09655ab78d37d5ebe8d83181e09195e8df4ce34c6f4b6259a705dc8437"
+    },
+    {
+      "file": "verify.py",
+      "hash": "adc8b4ae882d232d7fc199cbc66a58c2d081b9ffb00fb14cf97540432ba24a6c"
+    }
+  ]
+}
