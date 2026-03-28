@@ -13,7 +13,7 @@ function scan(dir) {
       const content = fs.readFileSync(fullPath, 'utf8');
       HIGH_ENTROPY_PATTERNS.forEach(pattern => {
         if (pattern.test(content)) {
-          console.error(`❌ Entropy Violation: ${fullPath} contains ${pattern}`);
+          console.error(` Entropy Violation: ${fullPath} contains ${pattern}`);
           process.exit(1);
         }
       });
@@ -21,6 +21,6 @@ function scan(dir) {
   }
 }
 
-console.log("🔍 Scanning for non-deterministic entropy...");
+console.log(" Scanning for non-deterministic entropy...");
 scan('../../'); // Scan from workspaces level
-console.log("✅ No non-deterministic entropy detected.");
+console.log(" No non-deterministic entropy detected.");
