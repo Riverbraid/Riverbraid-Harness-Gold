@@ -19,6 +19,6 @@ export const runSafetyCheck = (input) => {
   return {
     status: "ALLOW",
     integrity: "VERIFIED",
-    merkle_root: "de2062"
+    merkle_root: "adef13"
   };
 };

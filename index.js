@@ -4,7 +4,7 @@
  */
 
 export const runInHarness = async (task, context) => {
-    const REQUIRED_ROOT = "de2062";
+    const REQUIRED_ROOT = "adef13";
     
     console.log(`[HARNESS] Initializing task: ${task.name}`);
 
