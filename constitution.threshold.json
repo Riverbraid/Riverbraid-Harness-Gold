@@ -1,7 +1,7 @@
 {
   "protocol": "Riverbraid-Guard",
   "version": "1.5.0",
-  "genesis_root": "de2062ce2062ce2062ce2062ce2062ce2062ce2062ce2062ce2062ce2062ce20",
+  "genesis_root": "d4935ece2062ce2062ce2062ce2062ce2062ce2062ce2062ce2062ce2062ce20",
   "entropy_ban": true,
   "thresholds": {
     "filesystem_write": 2,
