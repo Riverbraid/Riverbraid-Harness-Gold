@@ -1,5 +1,5 @@
 import { createHash } from 'crypto';
-import { readFileSync, readdirSync } from 'fs';
+import { readFileSync } from 'fs';
 import { join } from 'path';
 
 const TARGET_REPOS = ['Riverbraid-Core', 'Riverbraid-Crypto-Gold'];
@@ -20,7 +20,7 @@ TARGET_REPOS.forEach(repo => {
     const internalAnchor = readFileSync(anchorPath, 'utf8').trim();
     const snapshotContent = readFileSync(snapshotPath, 'utf8');
     
-    // Independent Hash Generation
+    // Independent Hash Generation using the same algorithm as the internal gate
     const independentHash = createHash('sha256')
       .update(JSON.stringify(JSON.parse(snapshotContent), null, 2))
       .digest('hex')
@@ -33,6 +33,6 @@ TARGET_REPOS.forEach(repo => {
       process.exit(1);
     }
   } catch (e) {
-    console.error(`⚠️ ${repo}: Verification files missing.`);
+    console.error(`⚠️ ${repo}: Verification files missing or unreadable.`);
   }
 });
