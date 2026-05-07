@@ -1,0 +1,13 @@
+{
+  "schema": "riverbraid.gold.verify.output",
+  "version": "1.0.0",
+  "repo": "Riverbraid-Harness-Gold",
+  "ring": 1,
+  "petal": "Harness-Gold",
+  "invariant": "HARNESS_STATIONARY",
+  "status": "VERIFIED",
+  "result": true,
+  "expected_result": true,
+  "canonical_signal": "harness-gold:STATIONARY",
+  "canonical_reason": "Stationary fields match declared petal identity"
+}

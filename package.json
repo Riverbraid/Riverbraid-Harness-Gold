@@ -1,14 +1,19 @@
 {
-  "name": "@riverbraid/riverbraid-harness-gold",
-  "version": "2.1.0",
+  "name": "@riverbraid/harness-gold",
+  "version": "1.0.0",
   "private": true,
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "verify": "node run-vectors.cjs verify",
-    "test": "npm run verify:feature-flow",
-    "verify:feature-flow": "node verify-feature-flow.cjs"
+    "verify": "node verify.mjs",
+    "test": "node verify.mjs",
+    "verify:feature-flow": "node verify-feature-flow.cjs",
+    "test:legacy": "npm run verify:feature-flow",
+    "verify:legacy": "node run-vectors.cjs verify"
   },
   "engines": {
     "node": "24.11.1"
-  }
+  },
+  "description": "Riverbraid Gold petal for deterministic stationarity verification.",
+  "main": "index.js",
+  "license": "MIT"
 }

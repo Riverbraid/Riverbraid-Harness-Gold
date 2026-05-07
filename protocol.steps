@@ -1,0 +1,33 @@
+{
+  "schema": "riverbraid.gold.protocol.steps",
+  "version": "1.0.0",
+  "repo": "Riverbraid-Harness-Gold",
+  "ring": 1,
+  "petal": "Harness-Gold",
+  "invariant": "HARNESS_STATIONARY",
+  "claim_boundary": "declared-conditions-only",
+  "canonical_input": {
+    "repo": "Riverbraid-Harness-Gold",
+    "petal": "Harness-Gold",
+    "ring": 1,
+    "invariant": "HARNESS_STATIONARY"
+  },
+  "expected_result": true,
+  "steps": [
+    "receive canonical stationarity object",
+    "require repo to equal Riverbraid-Harness-Gold",
+    "require petal to equal Harness-Gold",
+    "require ring to equal 1",
+    "require invariant to equal HARNESS_STATIONARY",
+    "emit deterministic verification output"
+  ],
+  "forbidden": [
+    "Date",
+    "Math.random",
+    "randomUUID",
+    "timestamps",
+    "absolute paths",
+    "environment dependent values",
+    "external lookups"
+  ]
+}

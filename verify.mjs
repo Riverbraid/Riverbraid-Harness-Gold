@@ -1,26 +1,25 @@
-﻿import { readFileSync, existsSync, readdirSync } from 'fs';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
-
-const __dir = dirname(fileURLToPath(import.meta.url));
-const GENESIS_ANCHOR = '01a777';
-
-function fail(msg) {
-  console.error(`FAIL-CLOSED: ${msg}`);
+import { readFileSync, writeFileSync } from "fs";
+import { verify } from "./index.js";
+const protocol = JSON.parse(readFileSync("protocol.steps", "utf8"));
+const input = protocol.canonical_input;
+const expectedResult = protocol.expected_result;
+const result = verify(input);
+const output = {
+  schema: "riverbraid.gold.verify.output",
+  version: "1.0.0",
+  repo: "Riverbraid-Harness-Gold",
+  ring: 1,
+  petal: "Harness-Gold",
+  invariant: "HARNESS_STATIONARY",
+  status: result.pass === true && result.stationary === expectedResult ? "VERIFIED" : "FAILED",
+  result: result.stationary,
+  expected_result: expectedResult,
+  canonical_signal: result.signal,
+  canonical_reason: result.reason
+};
+writeFileSync("verify-output.json", JSON.stringify(output, null, 2) + "\n", "utf8");
+if (output.status !== "VERIFIED") {
+  console.error("HARNESS_GOLD_VERIFICATION_FAILED");
   process.exit(1);
 }
-
-// Check Anchor
-const anchorPath = resolve(__dir, '.anchor');
-if (!existsSync(anchorPath)) fail('Missing .anchor file');
-const anchor = readFileSync(anchorPath, 'utf8').trim();
-if (anchor !== GENESIS_ANCHOR) fail('Anchor mismatch');
-
-// Check for Structural Integrity (Cargo, Spec, or Source)
-const artifacts = ['Cargo.toml', 'spec.json', 'src', 'package.json'];
-const found = artifacts.some(f => existsSync(resolve(__dir, f)));
-
-if (!found) fail('Structural Integrity Check Failed: No build or source artifacts found.');
-
-console.log('STATIONARY: System integrity verified.');
-process.exit(0);
+console.log("HARNESS_GOLD_VERIFICATION_SUCCESS");
