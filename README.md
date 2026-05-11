@@ -11,3 +11,6 @@
 **Verification:** `npm test`
 **Authority:** 2-of-2 GPG Threshold
 ---
+
+## License
+MIT.
