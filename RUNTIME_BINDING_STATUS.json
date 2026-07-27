@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "record_id": "RB-HARNESS-GOLD-RUNTIME-BINDING-STATUS-001",
+  "version": "1.0.0-candidate",
+  "as_of": "2026-07-27",
+  "repository": "Riverbraid/Riverbraid-Harness-Gold",
+  "status": "BLOCKED_BY_SOURCE_CONTRACT",
+  "assessed_entrypoints": [
+    "runtime-binding.js",
+    "src/runtime-binding.js"
+  ],
+  "intended_gpg_contract": {
+    "executable": "gpg",
+    "arguments": ["--verify", "SIGNATURE_PATH", "ANCHOR_PATH"],
+    "ci_skip_permitted": false,
+    "invalid_signature_must_fail_closed": true,
+    "missing_signature_or_anchor_must_fail_closed": true
+  },
+  "observed_blockers": [
+    {
+      "code": "MISSING_VERIFY_SWARM_IMPLEMENTATION",
+      "path": "bin/verify-swarm.cjs",
+      "effect": "Both runtime-binding entrypoints require verifySwarm and getCurrentRoot from a file that is not present on the observed default branch."
+    },
+    {
+      "code": "MISSING_SHIELD_IMPLEMENTATION",
+      "path": "riverbraid-shield.js",
+      "effect": "Both runtime-binding entrypoints require a shield module that is not present on the observed default branch."
+    },
+    {
+      "code": "MODULE_FORMAT_MISMATCH",
+      "path": "runtime-binding.js",
+      "effect": "The package declares type=module while this .js entrypoint uses CommonJS require and module.exports syntax."
+    },
+    {
+      "code": "MODULE_FORMAT_MISMATCH",
+      "path": "src/runtime-binding.js",
+      "effect": "The package declares type=module while this .js entrypoint uses CommonJS require and module.exports syntax."
+    }
+  ],
+  "gpg_execution_evidence": "NOT_ASSESSED",
+  "repository_verifier_relationship": "SEPARATE_LOCAL_STATIONARITY_SURFACE",
+  "claim_effect": "The repository-local verifier may execute independently, but the runtime GPG binding cannot be described as executable or verified from the observed source state.",
+  "required_repair_sequence": [
+    "Recover or implement the exact verify-swarm dependency under an attributable specification.",
+    "Recover or implement the exact shield dependency under an attributable specification.",
+    "Reconcile runtime-binding module format with the package type and declared consumers.",
+    "Add direct valid-signature, invalid-signature, missing-input, and CI=true GPG tests using an isolated keyring.",
+    "Execute the tests on an exact source identity and preserve the result before reclassifying this record."
+  ],
+  "nonclaims": [
+    "This record does not establish compromise.",
+    "This record does not establish that the intended missing dependencies are known.",
+    "This record does not verify GPG behavior.",
+    "This record does not establish production readiness, security hardening, external audit, or absence of defects.",
+    "A green repository-local verifier does not close the runtime-binding fault."
+  ],
+  "review_triggers": [
+    "bin/verify-swarm.cjs is added or restored",
+    "riverbraid-shield.js is added or restored",
+    "runtime-binding module format changes",
+    "a declared runtime consumer is identified",
+    "direct GPG execution evidence is produced"
+  ]
+}
